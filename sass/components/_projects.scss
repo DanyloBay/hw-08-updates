@@ -1,0 +1,35 @@
+.projects {
+    margin: 0;
+    padding-left: 0;
+
+    display: flex;
+    @extend %list;
+
+    .projects__item {
+        position: relative;
+    }
+    
+    .projects__item:not(:first-child) {
+        margin-left: 30px;
+    }
+    
+    .projects__text {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        color: var(--white-text-color);
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;    
+        background-color: var(--background-project-text);
+    }
+}

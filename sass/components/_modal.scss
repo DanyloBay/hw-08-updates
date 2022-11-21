@@ -1,0 +1,124 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--backdrop);
+
+    transition: transform 500ms ease, opacity 300ms ease, visibility 300ms ease;
+
+    overflow-y: scroll;
+
+    @include breakpointTo(tablet)
+    {
+        padding: 93px 15px;
+    }
+}
+
+.backdrop__is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: scale3d(0.1, 0.5, 1);
+}
+
+.modal {
+    max-width: 450px;
+    max-height: 609px;
+    padding: 40px;
+
+    background-color: var(--white);
+
+    @include breakpointTo(mobile)
+    {
+        position: absolute;
+    }
+
+    @include breakpointBetween(mobile, tablet) {
+        min-width: 450px;
+        width: calc(100% / 3);
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include breakpointFrom(tablet) {
+        min-width: 450px;
+        width: calc(100% / 3);
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include breakpointFrom(desktop) {
+        min-width: 528px;
+        width: calc(100% / 3);
+        min-height: 581px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+    .modal__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: var(--white);
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    
+        color: var(--black);
+        cursor: pointer;
+    
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    
+    }
+    
+    .modal__close-icon {
+        width: 11px;
+        height: 11px;
+        fill: currentColor;
+    
+        @include transitions(color);
+    }
+
+    .modal__button:hover .modal__close-icon,
+    .modal__button:focus-visible .modal__close-icon
+    {
+        color: var(--second-icon-color);
+    }
+
+    
+    .modal__tittle
+    {
+        margin-bottom: 12px;
+        margin-top: 0px;
+        padding: 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 0.03em;
+        
+    
+        color: var(--main-color);
+
+        @include breakpointFrom(desktop){
+            font-size: 20px;
+            line-height: 1.15;
+        }
+    }
+}

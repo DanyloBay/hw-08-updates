@@ -1,0 +1,127 @@
+.portfolio {
+    margin: 0;
+    padding-left: 0;
+
+    @extend %list;
+
+    @include breakpointFrom(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @include breakpointFrom(desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    .portfolio__item {
+        max-width: 450px;
+        
+        &:not(:last-child)
+        {
+            margin-bottom: 30px;
+        }
+
+        @include breakpointFrom(tablet) {
+            width: 354px;
+
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @include breakpointFrom(desktop) {
+            width: 370px;
+
+            margin: 15px;
+            width: calc((100% - 6 * 15px) / 3);
+        }
+
+    }
+    
+    .portfolio__link {
+        display: block;
+        position: relative;
+    
+        @include transitions(box-shadow);
+
+        @extend %link;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
+    }
+    
+    .portfolio__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+    
+
+    .portfolio__box {
+        padding: 20px 24px;
+        border-left: 1px solid var(--portfolio-border-color);
+        border-right: 1px solid var(--portfolio-border-color);
+        border-bottom: 1px solid var(--portfolio-border-color);
+    }
+    
+    .portfolio__tittle {
+        margin-top: 0;
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    
+        color: var(--main-color);
+    }
+}
+
+.portfolio__thumb-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+
+    @include transitions(transform);
+
+    &:hover::before
+    {
+        transform: translateY(0);
+    }
+
+}
+
+.portfolio__thumb-overlay {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--white-text-color);
+    margin: 0;
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    transform: translateY(100%);
+
+    background-color: var(--overlay-color);
+
+    @include transitions(transform);
+
+    .portfolio__item:hover &,
+    .portfolio__item:focus &{
+        transform: translateY(0);
+    }
+}

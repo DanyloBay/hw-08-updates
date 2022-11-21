@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-text-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+%link {
+    text-decoration: none;
+}
+
+%list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.text {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    color: var(--main-text-color);
+}

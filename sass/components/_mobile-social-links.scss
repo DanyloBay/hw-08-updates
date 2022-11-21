@@ -1,0 +1,39 @@
+.menu__social-box {
+  display: none;
+  @extend %list;
+}
+
+.menu__container.is-open .menu__social-box
+{
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    
+    @include breakpointFrom(tablet) {
+      display: none;
+    }
+}
+
+.menu__social-items {
+      &:not(:last-child) {
+      border-right: 1px solid var(--modal-border-color);
+      .menu__social-link {
+        padding-right: 10px;
+      }
+    }
+    &:nth-child(n + 2) {
+      .menu__social-link {
+        padding-left: 10px;
+      }
+    }
+}
+
+.menu__social-link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+
+    @extend %link;
+}

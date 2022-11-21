@@ -1,0 +1,153 @@
+.menu__contacts
+{
+    @include breakpointFrom(tablet)
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts {
+    display: none;
+    @extend %list;
+
+    @include breakpointTo(tablet)
+    {
+        margin-bottom: 64px;
+    }
+
+    @include breakpointFrom(tablet)
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        margin-left: auto;
+    }
+
+    @include breakpointFrom(desktop)
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-left: auto;
+    }
+}
+
+.menu__container.is-open .contacts
+{
+    display: flex;
+    flex-direction: column-reverse;
+
+    cursor: pointer;
+}
+
+
+.contacts__item
+{
+    @include breakpointTo(tablet)
+    {
+        &:nth-child(n+2)
+        {
+            margin-bottom: 32px;
+        }
+    }
+
+    &:not(:last-child){
+        @include breakpointFrom(tablet) {
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+    &:not(:last-child)
+    {
+        @include breakpointFrom(desktop) {
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contacts__link {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+
+    @include transitions(color);
+    @extend %link;
+
+    @include breakpointFrom(tablet){
+        display: flex;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: var(--main-text-color);
+
+        &:hover,
+        &:focus {
+            color: var(--second-color);
+        }
+    }
+
+    @include breakpointFrom(desktop) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+
+.contacts__link--text-color
+{
+    @include breakpointTo(tablet) {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: var(--main-text-color);
+    }
+}
+
+.contacts__icon{
+    display: none;
+
+    @include breakpointFrom(tablet){
+        display: block;
+        margin-right: 8px;
+        width: 14px;
+        height: 10px;
+        fill: var(--header-icon-color);
+
+        @include transitions(fill);
+    }
+
+    @include breakpointFrom(desktop) {
+        width: 16px;
+        height: 12px;
+
+        margin-right: 10px;
+    }
+
+    .contacts__item:hover &,
+    .contacts__item:focus &{
+        fill: var(--second-color);
+    }
+}
+
+.contacts__icon--tel {
+
+    @include breakpointFrom(tablet) {
+        display: block;
+        width: 10px;
+        height: 14px;
+    }
+
+    @include breakpointFrom(desktop) {
+        height: 16px;
+    }
+}

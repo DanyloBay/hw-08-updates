@@ -1,0 +1,288 @@
+.footer {
+    padding: 60px 0;
+    background-color: var(--background-color);
+
+    .footer--container {
+
+        @include breakpointTo(tablet){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include breakpointBetween(tablet, desktop){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+
+        @include breakpointFrom(desktop){
+            display: flex;
+            align-items: baseline;
+        }
+    }
+
+    .footer__item
+    {
+        @include breakpointTo(desktop)
+        {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        @include breakpointFrom(desktop){
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__article--white {
+        color: var(--white-text-color);
+    }
+    
+    .footer__logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .address {
+        font-style: normal;
+    }
+    
+    .address__book {
+        margin: 0;
+        padding-left: 0;
+    
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+
+        @extend %list;
+    }
+    
+    .address__book .address__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    .address__nav {
+        color: var(--footer-text-color);
+
+        @extend %link;
+    }
+
+    .address__nav--white
+    {
+        color: var(--white-text-color);
+    }
+
+    .footer--margin-left {
+        @include breakpointFrom(desktop){
+            margin-left: 70px;
+        }
+    }
+
+    .footer__socials
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include breakpointTo(tablet)
+        {
+            margin-bottom: 60px;
+        }
+    }
+    
+    .footer__tittle {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--white-text-color);
+        text-align: center;
+
+        @include breakpointFrom(desktop){
+            display: flex;
+            text-align: start;
+        }
+    
+    }
+    
+    .footer__box {
+        display: flex;
+        align-items: center;
+    
+        padding: 0;
+    
+        gap: 10px;
+
+        @extend %list;
+
+        @include breakpointFrom(tablet) {
+            margin-bottom: 0;
+        }
+
+        @include breakpointFrom(desktop) {
+            margin-bottom: 0;
+        }
+    }
+    
+    .footer__network {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 44px;
+        height: 44px;
+        color: var(--white);
+        background-color: var(--background-icon-footer);
+    
+        border-radius: 50%;
+    
+        @include transitions(color);
+        @include transitions(background-color);
+
+        &:hover,
+        &:focus {
+            color: var(--white);
+            background-color: var(--second-icon-color);
+        }
+    }    
+    
+    .footer__icon {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+    }
+
+    .footer__thumb
+    {
+        @include breakpointFrom(tablet){
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+    
+            margin: 0 auto;
+        }
+
+        @include breakpointFrom(desktop) {
+            align-self: baseline;
+        }
+    }
+
+    .footer__form--mgleft
+    {
+        @include breakpointFrom(desktop) {
+            margin-left: 93px;
+        }
+    }
+
+    .footer__input
+    {   
+        padding-left: 16px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: var(--footer-text-color);
+
+        background: none;
+        border: 1px solid var(--footer-border-input);
+        border-radius: 4px;
+
+        width: 100%;
+
+        @include breakpointTo(tablet) {
+            margin-bottom: 20px;
+        }
+
+        @include breakpointFrom(tablet){
+            width: 450px;
+            margin-bottom: 20px;
+        }
+
+        @include breakpointFrom(desktop) {
+            width: 358px;
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__input::placeholder
+    {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: var(--footer-text-color);
+
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__form {
+        
+        @include breakpointTo(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 450px;
+        }
+
+        @include breakpointFrom(desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .footer__button
+    {
+        display: flex;
+        align-items: center;
+
+        padding: 10px 28px;
+        margin-left: 12px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        border-radius: 4px;
+        border: none;
+
+        background-color: var(--second-color);
+        color: var(--white-text-color);
+
+        cursor: pointer;
+
+        @include breakpointFrom(tablet){
+            margin: 0 auto;
+        }
+
+        @include breakpointFrom(desktop) {
+            margin-left: 12px;
+        }
+
+        .footer__button-item
+        {
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer__button-icon
+        {
+            width: 100%;
+            height: 100%;
+    
+            fill: var(--white);
+        }
+
+    }
+}

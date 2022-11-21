@@ -1,0 +1,22 @@
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    @include breakpointFrom(mobile)
+    {
+        width: 480px;
+    }
+
+    @include breakpointFrom(tablet)
+    {
+        width: 768px;
+    }
+
+    @include breakpointFrom(desktop)
+    {
+        width: 1200px;
+    }
+}
+
+

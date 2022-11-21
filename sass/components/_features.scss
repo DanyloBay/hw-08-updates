@@ -1,0 +1,105 @@
+.features {
+    margin: 0;
+    padding-left: 0;
+
+    @include breakpointFrom(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    @include breakpointFrom(desktop) {
+        display: flex;
+        margin: -15px;
+    }
+
+    @extend %list;
+
+    .features__tittle {
+        margin: 0;
+        margin-bottom: 10px;
+    
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        color: var(--main-color);
+        text-align: center;
+    
+        text-transform: uppercase;
+
+        @include breakpointFrom(tablet) {
+            text-align: left;
+    
+        }
+    
+        @include breakpointFrom(desktop) {
+            text-align: left;
+        }
+    }
+
+    .features__item
+    {
+
+        @include breakpointFrom(tablet) {
+            width: 374px;
+
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @include breakpointFrom(desktop) {
+            width: 270px;
+
+            margin: 15px;
+            width: calc((100% - 8 * 15px) / 4);
+        }
+
+        &:not(:last-child)
+        {
+            @include breakpointTo(tablet){
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .features__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        max-width: 450px;
+        height: 120px;
+        margin-bottom: 30px;
+    
+    
+        background-color: var(--background-team);
+        background-position: center;
+        border-radius: 4px;    
+    }
+
+    .features__icon {
+        width: 65px;
+        height: 70px;
+
+        @include breakpointFrom(tablet) {
+            width: 70px;
+        }
+    
+        @include breakpointFrom(desktop) {
+            width: 70px;
+        }
+    }
+
+    .features__text
+    {
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    
+        color: var(--main-text-color);
+    }
+    
+}

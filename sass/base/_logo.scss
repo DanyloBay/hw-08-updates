@@ -1,0 +1,20 @@
+.logo, .footer__logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+
+    color: var(--main-color);
+
+    @extend %link;
+}
+
+.menu__container.is-open .logo
+{
+    display: none;
+}
+
+.logo__article,
+.footer__article {
+    color: var(--second-color);
+}

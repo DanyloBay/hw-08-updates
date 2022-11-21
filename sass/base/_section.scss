@@ -1,0 +1,49 @@
+.section {
+    padding: 60px 0;
+
+    @include breakpointFrom(desktop)
+    {
+        padding: 94px 0;
+    }
+}
+
+.section__title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.175;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+
+    text-align: center;
+
+    @include breakpointFrom(desktop)
+    {
+        font-size: 36px;
+        line-height: 1.16;
+
+        margin-bottom: 50px;
+    }
+}
+
+.section__visibility-hidden {
+    display: none;
+}
+
+.section--phone-tablet-hidden
+{
+    @include breakpointTo(desktop)
+    {
+        display: none; 
+    }
+}
+
+.section--no-padding-top {
+    padding-top: 0;
+}
+
+.section--other-bg {
+    background-color: var(--background-team);
+}
