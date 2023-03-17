@@ -79,16 +79,16 @@
                 <h1 class="section__tittle section__visibility-hidden">Портфоліо</h1>
 
                 <ul class="buttons">
-                    <li class="buttons__item"> <button type="button" class="button">Усі</button> </li>
-                    <li class="buttons__item"> <button type="button" class="button">Веб-сайти</button> </li>
-                    <li class="buttons__item"> <button type="button" class="button">Додатки</button> </li>
-                    <li class="buttons__item"> <button type="button" class="button">Дизайн</button> </li>
-                    <li class="buttons__item"> <button type="button" class="button">Маркетинг</button> </li>
+                    <li class="buttons__item"> <button data-filter="*" type="button" class="button filter-articles__item active">Усі</button> </li>
+                    <li class="buttons__item"> <button data-filter="des" type="button" class="button filter-articles__item">Дизайн</button> </li>
+                    <li class="buttons__item"> <button data-filter="apps" type="button" class="button filter-articles__item">Додатки</button> </li>
+                    <li class="buttons__item"> <button data-filter="web" type="button" class="button filter-articles__item">Веб-сайти</button> </li>
+                    <li class="buttons__item"> <button data-filter="mark" type="button" class="button filter-articles__item">Маркетинг</button> </li>
                 </ul>
 
 
-                <ul class="portfolio">
-                    <li class="portfolio__item">
+                <ul class="portfolio articles__items">
+                    <li data-filter="web" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -97,7 +97,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio1-desktop.jpg 1x, ./images/portfolio/portfolio1-desktop@2x.jpg 2x"
@@ -129,7 +129,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="des" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -138,7 +138,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio2-desktop.jpg 1x, ./images/portfolio/portfolio2-desktop@2x.jpg 2x"
@@ -170,7 +170,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="apps" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -179,7 +179,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio3-desktop.jpg 1x, ./images/portfolio/portfolio3-desktop@2x.jpg 2x"
@@ -211,7 +211,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="mark" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -220,7 +220,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio4-desktop.jpg 1x, ./images/portfolio/portfolio4-desktop@2x.jpg 2x"
@@ -252,7 +252,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="apps" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -261,7 +261,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio5-desktop.jpg 1x, ./images/portfolio/portfolio5-desktop@2x.jpg 2x"
@@ -293,7 +293,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="web" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -302,7 +302,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio6-desktop.jpg 1x, ./images/portfolio/portfolio6-desktop@2x.jpg 2x"
@@ -334,7 +334,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="des" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -343,7 +343,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio7-desktop.jpg 1x, ./images/portfolio/portfolio7-desktop@2x.jpg 2x"
@@ -375,7 +375,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="mark" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -384,7 +384,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio8-desktop.jpg 1x, ./images/portfolio/portfolio8-desktop@2x.jpg 2x"
@@ -416,7 +416,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-filter="apps" class="portfolio__item articles__item article">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
                                 <div class="portfolio__thumb-item">
@@ -425,7 +425,7 @@
                                         Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                                         приватну особу.
                                     </p>
-                                    <picture>
+                                    <picture class="article__image">
 
                                         <source
                                             srcset="./images/portfolio/portfolio9-desktop.jpg 1x, ./images/portfolio/portfolio9-desktop@2x.jpg 2x"
@@ -545,6 +545,8 @@
     </footer>
 
     <script src="./js/mobile-menu.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="./js/filter_portfolio.js"></script>
 
 </body>
 
